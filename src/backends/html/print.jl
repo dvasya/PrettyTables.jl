@@ -25,6 +25,7 @@ function _pt_html(
     standalone::Bool = false,
     table_div_class::String = "",
     table_class::String = "",
+    table_id::String = "",
     table_style::Dict{String, String} = Dict{String, String}(),
     top_left_str::String = "",
     top_right_str::String = "",
@@ -206,6 +207,7 @@ function _pt_html(
 
     empty!(properties)
     properties["class"] = table_class
+    properties["id"] = table_id
 
     _aprintln(
         buf,
